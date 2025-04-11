@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <style>
+      /* 選單樣式 */
+      .menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      .menu li {
+        display: inline;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .menu a:hover {
+        background-color: #faedcd;
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 選單 -->
+    <ul class="menu">
+      <li><a href="#home">首頁</a></li>
+      <li><a href="#about">自我介紹</a></li>
+      <li class="dropdown">
+        <a href="#portfolio">作品集</a>
+        <ul class="submenu">
+          <li><a href="https://hackmd.io/@BlSvKFdvRumvoUkbJDVWyw/brandnew" target="iframe-content">第一周</a></li>
+          <li><a href="https://hackmd.io/@BlSvKFdvRumvoUkbJDVWyw/sagtr" target="iframe-content">第二周</a></li>
+          <li><a href="https://hackmd.io/@BlSvKFdvRumvoUkbJDVWyw/Sk2h4ZZh1g" target="iframe-content">第三周</a></li>
+          <li><a href="https://hackmd.io/@BlSvKFdvRumvoUkbJDVWyw/123456" target="iframe-content">第四周</a></li>
+        </ul>
+      </li>
+      <li><a href="#quiz">測驗卷</a></li>
+      <li><a href="#tutorials">教學影片</a></li>
+    </ul>
+
+    <!-- iframe 顯示區域 -->
+    <iframe name="iframe-content" class="iframe-content" src="" frameborder="0"></iframe>
+
+    <!-- Sketch.js 動畫 -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
